@@ -13,7 +13,7 @@ class HomeController extends Controller
         if(Auth::id())
         {
             $user_type = Auth()->user()->user_type;
-            
+
             if($user_type == 'user')
             {
                 return view('dashboard');
@@ -25,5 +25,10 @@ class HomeController extends Controller
         }else{
             return redirect()->back();
         }
+    }
+
+    public function post()
+    {
+        return view('post');
     }
 }
