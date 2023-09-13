@@ -9,7 +9,7 @@
 
 <div class="container">
     <div class="row">
-        <h1>home page</h1>
+        <h1>welcome {{Auth::user()->name}}</h1>
     </div>
 </div>
 @endsection
